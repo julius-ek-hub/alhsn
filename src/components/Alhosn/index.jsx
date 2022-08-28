@@ -21,8 +21,8 @@ const Vaccin = ({ date, type, border = true }) => (
     <Center mt={1}>
         <Center
             border="2px solid #43b49b"
-            width={25}
-            height={14}
+            width={40}
+            height={30}
             borderRadius={2}
             whiteSpace="nowrap"
             mr={1}
