@@ -50,11 +50,11 @@ const PCR = ({ date, border = true }) => (
 
 const Alhosn = () => {
     const [height, setHeight] = useState();
+    const DAY_CONSTANT = 1000 * 3600 * 24;
+    const dateNow = Date.now() / DAY_CONSTANT;
+    const date2DaysAgo = new Date((dateNow - 2) * DAY_CONSTANT).toDateString().split(' ');
 
-
-    const resetHeight = () => {
-        setHeight(window.innerHeight);
-    }
+    const resetHeight = () => setHeight(window.innerHeight);
 
     useLayoutEffect(() => {
         resetHeight();
@@ -120,7 +120,7 @@ const Alhosn = () => {
                             position: 'absolute',
                             bgcolor: 'background.paper',
                         }} src="./logo-nobg.png" />
-                        <IconButton sx={{
+                        <IconButton disableRipple sx={{
                             bgcolor: 'background.paper',
                             position: 'absolute',
                             top: 20,
@@ -145,7 +145,7 @@ const Alhosn = () => {
                     </Center>
                     <Center flexDirection="column" pt={2}>
                         <Text variant='h5' fontWeight="bold" alpha={0.6}>2 days - PCR Negative</Text>
-                        <Text fontWeight="bold" alpha={0.5}>Since 07 Aug 2022</Text>
+                        <Text fontWeight="bold" alpha={0.5}>Since {date2DaysAgo[2]} {date2DaysAgo[1]} {date2DaysAgo[3]}</Text>
                         <QRCode />
                     </Center>
                     <Paper sx={{ p: 2, mt: 1.5 }}>

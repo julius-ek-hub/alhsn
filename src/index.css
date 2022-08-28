@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,11 +8,6 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
 }
 
 .qr-container {
@@ -41,29 +39,29 @@ code {
 }
 
 .qr-container .top {
-	top: -6px;
+	top: 0;
 	height: 6px;
 	left: 0;
 	right: 0;
 }
 
 .qr-container .right {
-	top: -6px;
+	top: 0;
 	right: 0;
-	bottom: -6px;
+	bottom: 0;
 	width: 6px;
 }
 
 .qr-container .bottom {
 	right: 0;
 	left: 0;
-	bottom: -6px;
+	bottom: 0;
 	height: 6px;
 }
 
 .qr-container .left {
 	top: 0;
-	bottom: -6px;
+	bottom: 100%;
 	width: 6px;
 	left: 0;
 }
