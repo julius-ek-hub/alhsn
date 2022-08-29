@@ -17,10 +17,10 @@ export const qrAnimation = async (_top, right, bottom, left) => {
 };
 
 export const countDown = async (holder, count = 60 * 5) => {
-	if (count <= 0) count = 60 * 4;
+	if (count <= 0) count = 60 * 5;
 	_(holder)
 		.truncate()
 		.addChild(`${Math.floor(count / 60)}:${count % 60}`);
 	await sleep(1000);
-	countDown(_(holder), --count);
+	countDown(holder, --count);
 };

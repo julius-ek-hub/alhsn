@@ -42,7 +42,7 @@ const QRCode = () => {
             </Center>
             <Text alpha={0.5} fontSize="x-small">
                 QR code will be updated in
-                <Text component="span" ref={timerRef} alpha={0.5} fontSize="x-small" ml={0.4}>01:19</Text>
+                <Text component="span" ref={timerRef} alpha={0.5} fontSize="small" ml={0.4}>01:19</Text>
             </Text>
         </>
     )
